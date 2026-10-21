@@ -284,3 +284,5 @@ Deux observations utiles à un attaquant **et** à un défenseur :
 ## Sources
 - Borck, *week4 — Nmap Scanning & Scan Reporting*
 - Énoncé TP2 — Reconnaissance active du réseau d'ACME
+
+Un alias Apache (/icons/) laissait remonter dans l’arborescence via des séquences ../ encodées (.%2e/), permettant de sortir du répertoire web autorisé et de lire des fichiers système comme httpd.conf. C’est un path traversal : l’encodage URL du point contourne un filtre qui ne cherchait que la chaîne littérale ../. Le serveur ne vérifiait pas correctement que le chemin final restait dans le DocumentRoot après décodage
